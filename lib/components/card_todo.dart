@@ -46,7 +46,10 @@ class CardTodo extends StatelessWidget {
               onChanged: (bool value) => onCheckboxChanged(value),
               controlAffinity: ListTileControlAffinity.leading,
               value: todo.status,
-              title: Text(todo.todo),
+              title: Text(
+                todo.todo,
+                style: TextStyle(decorationStyle: TextDecorationStyle.dotted),
+              ),
               secondary: FlatButton.icon(
                 icon: Icon(Icons.remove_circle),
                 label: Text(''),
